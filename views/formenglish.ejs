@@ -1,0 +1,59 @@
+<%- include("partials/header") -%>
+
+<a href="formsvenska.html">Svenska</a>
+<h1><%= form[0] %></h1>
+<h3><%= form[1] %></h3><br/>
+<h3><%= form[2] %></h3>
+<form action="mailto:bakery.marlie@gmail.com" method="post" enctype="text/plain">
+<div>
+  <label><%= form[3] %>:</label>
+  <input type="text" name="Name" value=""><br>
+</div>
+<div>
+  <label><%= form[4] %>:</label>
+  <input type="email" name="Email" value=""><br>
+</div>
+<div>
+  <label><%= form[5] %>:</label>
+  <input type="tel" name="Phone" value=""><br>
+</div>
+<div>
+  <label><%= form[6] %>:</label>
+  <input type="date" name="Date" value=""><br>
+</div>
+<div>
+  <label><%= dessert[0] %>:</label><br>
+  <input type="checkbox" name="Waffles" value="Waffles"><label><%= dessert[1] %></label><input type="number" name="numberWaffles" value=""><br>
+  <input type="checkbox" name="Pancakes" value="Pancakes"><label><%= dessert[2] %></label><input type="number" name="numberPancakes" value=""><br>
+</div>
+<div>
+  <label><%= dessert[3] %>:</label><br>
+  <input type="checkbox" name="largeApple" value="largeApple"><label><%= pies[0] %></label><input type="number" name="numberAppleLG" value=""><br>
+  <input type="checkbox" name="largeCheese" value="largeCheese"><label><%= pies[1] %></label><input type="number" name="numberCheeseLG" value=""><br>
+  <input type="checkbox" name="largeTarteApple" value="largeTarteApple"><label><%= pies[2] %></label><input type="number" name="numberTarteAppleLG" value=""><br>
+  <input type="checkbox" name="largeTartePear" value="largeTartePear"><label><%= pies[3] %></label><input type="number" name="numberTarteAppleLG" value=""><br>
+  <input type="checkbox" name="largeNodulePudding" value="largeNodulePudding"><label><%= pies[4] %></label><input type="number" name="numberNodulePuddingLG" value=""><br>
+  <input type="checkbox" name="largeNoduleApricot" value="largeNoduleApricot"><label><%= pies[5] %></label><input type="number" name="numberNoduleApricotLG" value=""><br>
+  <input type="checkbox" name="largeNoduleApple" value="largeNoduleApple"><label><%= pies[6] %></label><input type="number" name="numberNoduleAppleLG" value=""><br>
+  <input type="checkbox" name="largeNodulePear" value="largeNodulePear"><label><%= pies[7] %></label><input type="number" name="numberNodulePearLG" value=""><br>
+</div>
+<div>
+  <label><%= dessert[4] %>:</label><br>
+  <input type="checkbox" name="smallApple" value="smallApple"><label><%= pies[0] %></label><input type="number" name="numberAppleSM" value=""><br>
+  <input type="checkbox" name="smallCheese" value="smallCheese"><label><%= pies[1] %></label><input type="number" name="numberCheeseSM" value=""><br>
+  <input type="checkbox" name="smallTarteApple" value="smallTarteApple"><label><%= pies[2] %></label><input type="number" name="numberTarteAppleSM" value=""><br>
+  <input type="checkbox" name="smallTartePear" value="smallTartePear"><label><%= pies[3] %></label><input type="number" name="numberTartePearSM" value=""><br>
+  <input type="checkbox" name="smallNodulePudding" value="smallNodulePudding"><label><%= pies[4] %></label><input type="number" name="numberNodulePuddingSM" value=""><br>
+  <input type="checkbox" name="smallNoduleApricot" value="smallNoduleApricot"><label><%= pies[5] %></label><input type="number" name="numberNoduleApricotSM" value=""><br>
+  <input type="checkbox" name="smallNoduleApple" value="smallNoduleApple"><label><%= pies[6] %></label><input type="number" name="numberNoduleAppleSM" value=""><br>
+  <input type="checkbox" name="smallNodulePear" value="smallNodulePear"><label><%= pies[7] %></label><input type="number" name="numberNodulePearSM" value=""><br>
+</div>
+<div>
+  <label><%= form[7] %>:</label><br>
+  <textarea name="Message" rows="10" cols="30"></textarea><br>
+  <input type="submit" name="">
+</div>
+
+</form>
+
+<%- include("partials/footer") -%>
