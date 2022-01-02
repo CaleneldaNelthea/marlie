@@ -1,9 +1,9 @@
 body {
-  background-color: #EAF6F6;
+  background-color: #AAF3FF;
 }
 
 h1 {
-  color: #66BFBF;
+  color: #01C3E2;
 }
 
 hr {
@@ -28,11 +28,20 @@ input {
   padding: 5px 10px;
 }
 
+footer {
+  text-align: center;
+}
+
+.icon {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* navbar */
 
 /* The navigation bar */
 .navbar {
-  background-color: #333;
+  background-color: #AEC9FF;
   position: fixed;
   top: 0;
   width: 100%;
@@ -57,9 +66,13 @@ input {
 
 /* Main content */
 .main {
-  margin-top: 100px; /* Add a top margin to avoid content overlay */
+  margin-top: 150px; /* Add a top margin to avoid content overlay */
   text-align: center;
   z-index: 0;
+}
+
+.form {
+  margin-top: 100px;
 }
 
 .section-heading {

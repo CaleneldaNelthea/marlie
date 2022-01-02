@@ -10,14 +10,14 @@ const englishFormWords = [
   "Email",
   "Telephone Number",
   "Take out date",
-  "Extra notes"
+  "Extra notes",
+  "Large Pies (31cm)",
+  "Small Pies (13cm)",
+  "Waffles and Pancakes"
 ];
 const englishDessertWords = [
-  "Waffles and Pancakes",
   "Waffles",
-  "Pancakes",
-  "Large Pies (31cm)",
-  "Small Pies (13cm)"
+  "Pancakes"
 ]
 const englishPies = [
   "Apple Crumble",
@@ -38,14 +38,14 @@ const svenskaFormWords = [
   "E-post",
   "Telefonnummer",
   "Ta ut datum",
-  "Extra anteckningar"
+  "Extra anteckningar",
+  "Stora pajer (31 cm)",
+  "Små pajer (13cm)",
+  "Våfflor och pannkakor"
 ];
 const svenskaDessertWords = [
-  "Våfflor och pannkakor",
   "Våfflor",
-  "Pannkakor",
-  "Stora pajer (31 cm)",
-  "Små pajer (13cm)"
+  "Pannkakor"
 ]
 const svenskaPies = [
   "Äppelsmula",
@@ -58,6 +58,10 @@ const svenskaPies = [
   "Knölpaj Paron"
 ]
 
+const linkEnglish = "https://api.whatsapp.com/send?phone=46768640406&text=Hello,%20I%20have%20a%20question%20about%20the%20bakery.";
+
+const linkSvenska = "https://api.whatsapp.com/send?phone=46768640406&text=Hej,%20Jag%20har%20en%20fråga%20om%20bageriet";
+
 //must be below app express
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
@@ -69,6 +73,10 @@ app.get("/", function(req, res) {
 
 });
 
+app.get("/hem", function(req, res) {
+  res.render("hem");
+});
+
 app.get("/about", function(req, res) {
   res.render("about");
 });
@@ -78,11 +86,15 @@ app.get("/handla", function(req, res) {
 });
 
 app.get("/contact", function(req, res) {
-  res.render("contact");
+  res.render("contact", {
+    link: linkEnglish
+  });
 });
 
 app.get("/kontakt", function(req, res) {
-  res.render("kontakt");
+  res.render("kontakt", {
+    link: linkSvenska
+  });
 });
 
 app.get("/formenglish", function(req, res) {
@@ -101,8 +113,12 @@ app.get("/formsvenska", function(req, res) {
   });
 });
 
-app.get("/hem", function(req, res) {
-  res.render("hem");
+app.get("/products", function(req, res) {
+  res.render("products");
+});
+
+app.get("/produkter", function(req, res) {
+  res.render("produkter");
 });
 
 app.listen(3000, function() {
