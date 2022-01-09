@@ -69,36 +69,36 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 app.get("/", function(req, res) {
-  res.render("home")
+  res.render(__dirname + "/views/home")
 
 });
 
 app.get("/hem", function(req, res) {
-  res.render("hem");
+  res.render(__dirname + "/views/hem");
 });
 
 app.get("/about", function(req, res) {
-  res.render("about");
+  res.render(__dirname + "/views/about");
 });
 
 app.get("/handla", function(req, res) {
-  res.render("handla");
+  res.render(__dirname + "/views/handla");
 });
 
 app.get("/contact", function(req, res) {
-  res.render("contact", {
+  res.render(__dirname + "/views/contact", {
     link: linkEnglish
   });
 });
 
 app.get("/kontakt", function(req, res) {
-  res.render("kontakt", {
+  res.render(__dirname + "/views/kontakt", {
     link: linkSvenska
   });
 });
 
 app.get("/formenglish", function(req, res) {
-  res.render("form", {
+  res.render(__dirname + "/views/form", {
     form: englishFormWords,
     dessert: englishDessertWords,
     pies: englishPies
@@ -106,7 +106,7 @@ app.get("/formenglish", function(req, res) {
 });
 
 app.get("/formsvenska", function(req, res) {
-  res.render("form", {
+  res.render(__dirname + "/views/form", {
     form: svenskaFormWords,
     dessert: svenskaDessertWords,
     pies: svenskaPies
@@ -114,11 +114,11 @@ app.get("/formsvenska", function(req, res) {
 });
 
 app.get("/products", function(req, res) {
-  res.render("products");
+  res.render(__dirname + "/views/products");
 });
 
 app.get("/produkter", function(req, res) {
-  res.render("produkter");
+  res.render(__dirname + "/views/produkter");
 });
 
 app.listen(process.env.PORT || 3000, function() {
